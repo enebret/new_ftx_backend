@@ -11,6 +11,7 @@ connectDB();
 app.get('/', (req, res) => res.send('Hello world!'));
 
 app.use('/user', userR);
+app.use(express.json())
 
 //app.use()
 

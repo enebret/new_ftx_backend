@@ -6,4 +6,6 @@ respond with string after verification.
 6.mongodb u.name and p.word = mgtest
 7. in a different system/computer, go to mongodb settings and click on the "add your current ip" button, in oder to connect to the atlas db without any errors
 or create a different mongodb url using a new account for that pc 
+8. always use findmyip website to find exact ip address and edit ip on the network access page on the mongodb website if whitelist error shows on code repl
+9. install postman for desktop and run before making an api call on the web version
 
