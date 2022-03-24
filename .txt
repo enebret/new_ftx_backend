@@ -1,0 +1,5 @@
+create home,login and regsiter routes
+use input sanitizer module alongside middleware
+store info in db 
+respond with string after verification.
+5. res.send automatically sets headers and sends data type, while res.end ends the response process and does not set headers
