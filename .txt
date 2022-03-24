@@ -3,3 +3,7 @@ use input sanitizer module alongside middleware
 store info in db 
 respond with string after verification.
 5. res.send automatically sets headers and sends data type, while res.end ends the response process and does not set headers
+6.mongodb u.name and p.word = mgtest
+7. in a different system/computer, go to mongodb settings and click on the "add your current ip" button, in oder to connect to the atlas db without any errors
+or create a different mongodb url using a new account for that pc 
+

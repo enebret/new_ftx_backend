@@ -3,8 +3,10 @@
 const express = require('express');
 const res = require( 'express/lib/response' );
 const userR = require('./routes/signup.js');
+const connectDB = require('./config/db');
 
 const app = express();
+connectDB();
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
