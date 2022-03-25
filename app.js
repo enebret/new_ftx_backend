@@ -1,17 +1,21 @@
 
 /*jshint esversion: 8 */
 const express = require('express');
-const res = require( 'express/lib/response' );
+var bodyParser = require('body-parser');
 const userR = require('./routes/signup.js');
 const connectDB = require('./config/db');
 
 const app = express();
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 connectDB();
+
+
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
 app.use('/user', userR);
-app.use(express.json())
+app.use(express.json());
 
 //app.use()
 

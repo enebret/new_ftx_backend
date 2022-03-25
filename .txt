@@ -8,4 +8,6 @@ respond with string after verification.
 or create a different mongodb url using a new account for that pc 
 8. always use findmyip website to find exact ip address and edit ip on the network access page on the mongodb website if whitelist error shows on code repl
 9. install postman for desktop and run before making an api call on the web version
+10. to get data from body param, use bodyparser (app.use(bodyParser.urlencoded({ extended: false })); then next line,
+app.use(bodyParser.json());) in the app.js file, eg when you need data from POST request to store in database.
 
