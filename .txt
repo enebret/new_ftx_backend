@@ -10,4 +10,10 @@ or create a different mongodb url using a new account for that pc
 9. install postman for desktop and run before making an api call on the web version
 10. to get data from body param, use bodyparser (app.use(bodyParser.urlencoded({ extended: false })); then next line,
 app.use(bodyParser.json());) in the app.js file, eg when you need data from POST request to store in database.
+11. use app.use(cors()) without any cors parameter. Also app.use('/login', function (req, res, next) {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader('Access-Control-Allow-Methods', '*');
+    res.setHeader("Access-Control-Allow-Headers", "*");
+    next();
+}); before app.post('/login' (req,res)=>{})
 
