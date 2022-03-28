@@ -23,16 +23,22 @@ app.use('/login', function (req, res, next) {
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
+
+//login with authentication
 app.post('/login', (req, res) => {
-    const newUser = new User(req.body); //using model
-    newUser.save()
+    User.findOne({email: req.body.email})
     .then(user => {
-        //send response to react frontend
-        console.log(user);
-    })
-    .catch(error => {
-        res.status(500).json(error);
+        if(!user){
+            res.send('not user');
+        }
+        else if(req.body.password===user.password  ){
+            //validate password
+            //set cookie
+            //redirect to dahsboard
+            res.send('welcome');
+        }
     });
+   
 });
 
 app.use('/user', userR);

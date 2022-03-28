@@ -16,4 +16,5 @@ app.use(bodyParser.json());) in the app.js file, eg when you need data from POST
     res.setHeader("Access-Control-Allow-Headers", "*");
     next();
 }); before app.post('/login' (req,res)=>{})
+12.look for the logs in the browser console not node repl (any where there is a console.log in the react script, check the browser console not vscode console)
 
