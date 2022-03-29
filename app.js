@@ -24,6 +24,26 @@ app.use('/login', function (req, res, next) {
 app.get('/', (req, res) => res.send('Hello world!'));
 
 
+app.post('/signup', (req, res) => {
+    console.log(req.body.email);
+    let check = User.findOne({email: req.body.email});
+    if(check){
+        res.send('already registered');
+    }else if(!check){
+        const newUser = new User(req.body); //using model   
+            newUser.save()
+            .then(user => {
+                res.send(user);
+            })
+            .catch(error => {
+                res.send(error);
+            });
+    }
+    //check if user already has an account else proceed to creating a new account
+    //hash password
+    //redirect to dashboard
+    
+});
 //login with authentication
 app.post('/login', (req, res) => {
     User.findOne({email: req.body.email})
