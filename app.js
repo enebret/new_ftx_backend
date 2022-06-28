@@ -33,6 +33,7 @@ app.post('/signup', (req, res) => {
             newUser.save()
             .then(user => {
                 res.send(user);
+                console.log(user)
             })
             .catch(error => {
                 res.status(500).json(error);
@@ -57,7 +58,8 @@ app.post('/login', (req, res) => {
         if(!user){
             res.send('not user');
         }
-        else if(req.body.password===user.password  ){
+        else if(user){
+            console.log(user)
             //validate password
             //set cookie
             //redirect to dahsboard
