@@ -20,6 +20,8 @@ app.use('/login', function (req, res, next) {
     res.setHeader("Access-Control-Allow-Headers", "*");
     next();
 });
+app.use('/user', userR);
+app.use(express.json());
 
 app.get('/', (req, res) => res.send('Hello world!'));
 
@@ -69,8 +71,7 @@ app.post('/login', (req, res) => {
    
 });
 
-app.use('/user', userR);
-app.use(express.json());
+
 
 //app.use()
 

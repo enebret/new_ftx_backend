@@ -4,6 +4,10 @@ const http = require('http');
 
 var postData = JSON.stringify({email: 'awsumbret@gmail.com'});
 
+/**async function createListing(client, newListing){
+    const result = await client.db("sample_airbnb").collection("listingsAndReviews").insertOne(newListing);
+    console.log(`New listing created with the following id: ${result.insertedId}`);
+} */
 const options = {
     hostname: 'localhost',
     port: 8082,
